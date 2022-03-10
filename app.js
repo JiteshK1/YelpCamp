@@ -178,7 +178,8 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render("error", { err: err })
 
 })
-app.listen(3000, () => {
-    console.log("LISITING ON PORT 3000")
+const port = process.env.port || 3000
+app.listen(port, () => {
+    console.log(`LISITING ON PORT ${port}`)
 })
 
